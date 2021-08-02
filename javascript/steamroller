@@ -1,3 +1,5 @@
+//Flatten a nested array. You must account for varying levels of nesting.
+
 function steamrollArray(arr) {
   let newArr = [];
   for (let i=0; i<arr.length; i++) {
