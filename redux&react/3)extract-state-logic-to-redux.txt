@@ -1,0 +1,22 @@
+// 定义 ADD、addMessage()、messageReducer() 并在这里存储：
+const ADD = 'ADD';
+
+const addMessage = message => {
+  return {
+    type: ADD,
+    message
+  };
+};
+
+// Use ES6 default paramter to give the 'previousState' parameter an initial value.
+const messageReducer = (previousState = [], action) => {
+  switch (action.type) {
+    case ADD:
+      return [...previousState, action.message];
+      break;
+    default: 
+      return previousState;
+  }
+}
+
+const store = Redux.createStore(messageReducer);
